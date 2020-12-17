@@ -10,11 +10,15 @@ import Foundation
 
 
 struct MovieResultModel {
-    let title: String
+    let id: Int
     let overview: String
+    let poster_path: String
+    let title: String
     
     init(with dto: MovieResultDTO) {
-        title = dto.title
+        id = dto.id
         overview = dto.overview
+        poster_path = dto.poster_path
+        title = dto.title
     }
 }

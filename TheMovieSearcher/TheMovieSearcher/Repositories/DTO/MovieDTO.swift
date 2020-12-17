@@ -23,11 +23,15 @@ struct MovieSearchResultDTO: Decodable {
 }
 
 struct  MovieResultDTO: Decodable {
-    var title: String
+    var id: Int
     var overview: String
+    var poster_path: String
+    var title: String
     
     enum CodingKeys: String, CodingKey {
-        case title
+        case id
         case overview
+        case poster_path
+        case title
     }
 }
