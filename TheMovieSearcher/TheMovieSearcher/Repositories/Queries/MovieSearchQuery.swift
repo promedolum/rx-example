@@ -12,7 +12,6 @@ import RxCocoa
 
 final class MovieSearchQuery {
     
-    private let apiKey = "ab3bbac040d5de34d3f9e1183cde779e"
     let resultRelay = PublishRelay<[MovieSearchResultDTO]>()
     let disposeBag = DisposeBag()
     
@@ -36,12 +35,12 @@ final class MovieSearchQuery {
             return nil
         }
         var urlComponents = URLComponents()
-        urlComponents.scheme = "https"
-        urlComponents.host = "api.themoviedb.org"
+        urlComponents.scheme = APIConfig.apiScheme
+        urlComponents.host = APIConfig.apiHost
         urlComponents.path = "/3/search/movie"
         urlComponents.queryItems = [
-            .init(name: "api_key", value: apiKey),
-            .init(name: "language", value: "ru-RU"),
+            .init(name: "api_key", value: APIConfig.apiKey),
+            .init(name: "language", value: APIConfig.apiLanguage),
             .init(name: "query", value: query),
             .init(name: "page", value: "1"),
             .init(name: "include_adult", value: "false")]

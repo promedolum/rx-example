@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		CC7E8509D1FA095172D9D7E2 /* Pods_TheMovieSearcher.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BB77104F9C0A2F8EA04E0930 /* Pods_TheMovieSearcher.framework */; };
+		E137CACB25D59BA700763E46 /* APIConfig.swift in Sources */ = {isa = PBXBuildFile; fileRef = E137CACA25D59BA700763E46 /* APIConfig.swift */; };
 		E8CCEA682503D12400FC0035 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA672503D12400FC0035 /* AppDelegate.swift */; };
 		E8CCEA6A2503D12400FC0035 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA692503D12400FC0035 /* SceneDelegate.swift */; };
 		E8CCEA6C2503D12400FC0035 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA6B2503D12400FC0035 /* ViewController.swift */; };
@@ -24,6 +25,7 @@
 /* Begin PBXFileReference section */
 		A2098F38788BE1D72F1C5651 /* Pods-TheMovieSearcher.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieSearcher.release.xcconfig"; path = "Target Support Files/Pods-TheMovieSearcher/Pods-TheMovieSearcher.release.xcconfig"; sourceTree = "<group>"; };
 		BB77104F9C0A2F8EA04E0930 /* Pods_TheMovieSearcher.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_TheMovieSearcher.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E137CACA25D59BA700763E46 /* APIConfig.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIConfig.swift; sourceTree = "<group>"; };
 		E8CCEA642503D12400FC0035 /* TheMovieSearcher.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = TheMovieSearcher.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E8CCEA672503D12400FC0035 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E8CCEA692503D12400FC0035 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -149,6 +151,7 @@
 		E8CCEA8A2503DF0300FC0035 /* Queries */ = {
 			isa = PBXGroup;
 			children = (
+				E137CACA25D59BA700763E46 /* APIConfig.swift */,
 				E8CCEA882503D73B00FC0035 /* MovieSearchQuery.swift */,
 			);
 			path = Queries;
@@ -274,6 +277,7 @@
 				E8CCEA812503D2C000FC0035 /* MovieSearchDTO.swift in Sources */,
 				E8CCEA6C2503D12400FC0035 /* ViewController.swift in Sources */,
 				E8CCEA682503D12400FC0035 /* AppDelegate.swift in Sources */,
+				E137CACB25D59BA700763E46 /* APIConfig.swift in Sources */,
 				E8CCEA892503D73B00FC0035 /* MovieSearchQuery.swift in Sources */,
 				E8CCEA6A2503D12400FC0035 /* SceneDelegate.swift in Sources */,
 				E8CCEA852503D3BA00FC0035 /* MovieSearchViewModel.swift in Sources */,

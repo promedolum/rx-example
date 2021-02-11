@@ -7,3 +7,10 @@
 //
 
 import Foundation
+
+enum APIConfig {
+    static let apiKey = "ab3bbac040d5de34d3f9e1183cde779e"
+    static let apiScheme = "https"
+    static let apiHost = "api.themoviedb.org"
+    static let apiLanguage = "ru-RU"
+}
