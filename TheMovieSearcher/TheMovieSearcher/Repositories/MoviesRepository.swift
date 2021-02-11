@@ -13,11 +13,11 @@ final class MovieRepository {
     
     let searchQuery = MovieSearchQuery()
     
-    func getMovies(with query: Observable<String>) -> Observable<[MovieResultModel]> {
+    func getSearchedMovies(with query: Observable<String>) -> Observable<[MovieSearchResultModel]> {
         return searchQuery.fetchData(with: query)
             .map { dtos in
                return dtos.map { dto in
-                   return MovieResultModel(with: dto)
+                   return MovieSearchResultModel(with: dto)
                 }
         }
     }

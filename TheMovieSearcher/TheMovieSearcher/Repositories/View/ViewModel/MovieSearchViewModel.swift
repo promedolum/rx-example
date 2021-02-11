@@ -16,7 +16,7 @@ struct MovieSearchViewModelInput {
 
 struct MovieSearchViewModelOutput {
     
-    let searchResult: Driver<[MovieResultModel]>
+    let searchResult: Driver<[MovieSearchResultModel]>
 }
 
 final class MovieSearchViewModel {
@@ -34,7 +34,7 @@ final class MovieSearchViewModel {
         }
     
         return MovieSearchViewModelOutput(
-            searchResult: repo.getMovies(with: nonNullQuery).asDriver(onErrorJustReturn: [MovieResultModel]())
+            searchResult: repo.getSearchedMovies(with: nonNullQuery).asDriver(onErrorJustReturn: [MovieSearchResultModel]())
         )
         
     }

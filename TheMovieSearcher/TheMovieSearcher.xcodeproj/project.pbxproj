@@ -15,9 +15,9 @@
 		E8CCEA712503D12700FC0035 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E8CCEA702503D12700FC0035 /* Assets.xcassets */; };
 		E8CCEA742503D12700FC0035 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E8CCEA722503D12700FC0035 /* LaunchScreen.storyboard */; };
 		E8CCEA7D2503D29500FC0035 /* MoviesRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA7C2503D29500FC0035 /* MoviesRepository.swift */; };
-		E8CCEA812503D2C000FC0035 /* MovieDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA802503D2C000FC0035 /* MovieDTO.swift */; };
+		E8CCEA812503D2C000FC0035 /* MovieSearchDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA802503D2C000FC0035 /* MovieSearchDTO.swift */; };
 		E8CCEA852503D3BA00FC0035 /* MovieSearchViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA842503D3BA00FC0035 /* MovieSearchViewModel.swift */; };
-		E8CCEA872503D6EF00FC0035 /* MovieModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA862503D6EF00FC0035 /* MovieModel.swift */; };
+		E8CCEA872503D6EF00FC0035 /* MovieSearchModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA862503D6EF00FC0035 /* MovieSearchModel.swift */; };
 		E8CCEA892503D73B00FC0035 /* MovieSearchQuery.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8CCEA882503D73B00FC0035 /* MovieSearchQuery.swift */; };
 /* End PBXBuildFile section */
 
@@ -33,9 +33,9 @@
 		E8CCEA732503D12700FC0035 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		E8CCEA752503D12700FC0035 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		E8CCEA7C2503D29500FC0035 /* MoviesRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesRepository.swift; sourceTree = "<group>"; };
-		E8CCEA802503D2C000FC0035 /* MovieDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDTO.swift; sourceTree = "<group>"; };
+		E8CCEA802503D2C000FC0035 /* MovieSearchDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchDTO.swift; sourceTree = "<group>"; };
 		E8CCEA842503D3BA00FC0035 /* MovieSearchViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchViewModel.swift; sourceTree = "<group>"; };
-		E8CCEA862503D6EF00FC0035 /* MovieModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieModel.swift; sourceTree = "<group>"; };
+		E8CCEA862503D6EF00FC0035 /* MovieSearchModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchModel.swift; sourceTree = "<group>"; };
 		E8CCEA882503D73B00FC0035 /* MovieSearchQuery.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieSearchQuery.swift; sourceTree = "<group>"; };
 		F12C0381044472AC93E5ADE1 /* Pods-TheMovieSearcher.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-TheMovieSearcher.debug.xcconfig"; path = "Target Support Files/Pods-TheMovieSearcher/Pods-TheMovieSearcher.debug.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -115,7 +115,7 @@
 		E8CCEA7E2503D2A100FC0035 /* DTO */ = {
 			isa = PBXGroup;
 			children = (
-				E8CCEA802503D2C000FC0035 /* MovieDTO.swift */,
+				E8CCEA802503D2C000FC0035 /* MovieSearchDTO.swift */,
 			);
 			path = DTO;
 			sourceTree = "<group>";
@@ -123,7 +123,7 @@
 		E8CCEA7F2503D2AA00FC0035 /* Model */ = {
 			isa = PBXGroup;
 			children = (
-				E8CCEA862503D6EF00FC0035 /* MovieModel.swift */,
+				E8CCEA862503D6EF00FC0035 /* MovieSearchModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -269,9 +269,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E8CCEA872503D6EF00FC0035 /* MovieModel.swift in Sources */,
+				E8CCEA872503D6EF00FC0035 /* MovieSearchModel.swift in Sources */,
 				E8CCEA7D2503D29500FC0035 /* MoviesRepository.swift in Sources */,
-				E8CCEA812503D2C000FC0035 /* MovieDTO.swift in Sources */,
+				E8CCEA812503D2C000FC0035 /* MovieSearchDTO.swift in Sources */,
 				E8CCEA6C2503D12400FC0035 /* ViewController.swift in Sources */,
 				E8CCEA682503D12400FC0035 /* AppDelegate.swift in Sources */,
 				E8CCEA892503D73B00FC0035 /* MovieSearchQuery.swift in Sources */,

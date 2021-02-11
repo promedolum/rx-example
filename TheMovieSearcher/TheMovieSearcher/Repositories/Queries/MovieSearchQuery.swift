@@ -13,18 +13,18 @@ import RxCocoa
 final class MovieSearchQuery {
     
     private let apiKey = "ab3bbac040d5de34d3f9e1183cde779e"
-    let resultRelay = PublishRelay<[MovieResultDTO]>()
+    let resultRelay = PublishRelay<[MovieSearchResultDTO]>()
     let disposeBag = DisposeBag()
     
-    func fetchData(with query: Observable<String>) -> Observable<[MovieResultDTO]> {
+    func fetchData(with query: Observable<String>) -> Observable<[MovieSearchResultDTO]> {
         let session = URLSession.shared
         
-        return query.flatMap {[weak self] (query) -> Observable<[MovieResultDTO]> in
-            guard let url = self?.createURL(with: query) else { return .just([MovieResultDTO]()) }
+        return query.flatMap {[weak self] (query) -> Observable<[MovieSearchResultDTO]> in
+            guard let url = self?.createURL(with: query) else { return .just([MovieSearchResultDTO]()) }
             return session.rx.data(request: URLRequest(url: url))
-                .map { (data) -> [MovieResultDTO] in
-                    guard let DTOs = try? JSONDecoder().decode(MovieSearchResultDTO.self, from: data) else {
-                        return [MovieResultDTO]()
+                .map { (data) -> [MovieSearchResultDTO] in
+                    guard let DTOs = try? JSONDecoder().decode(MovieSearchResultsDTO.self, from: data) else {
+                        return [MovieSearchResultDTO]()
                     }
                     return DTOs.results
             }
