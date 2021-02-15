@@ -30,10 +30,10 @@ struct MoviePopularResultDTO: Decodable {
     var releaseDate: String
     
     enum CodingKeys: String, CodingKey {
-        case movieId
-        case localizedTitle
-        case originalTitle
-        case posterPath
-        case releaseDate
+        case movieId = "id"
+        case localizedTitle = "title"
+        case originalTitle = "original_title"
+        case posterPath = "poster_path"
+        case releaseDate = "release_date"
     }
 }
