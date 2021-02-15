@@ -9,11 +9,11 @@
 import Foundation
 
 
-struct MovieResultModel {
+struct MovieSearchResultModel {
     let title: String
     let overview: String
     
-    init(with dto: MovieResultDTO) {
+    init(with dto: MovieSearchResultDTO) {
         title = dto.title
         overview = dto.overview
     }

@@ -12,14 +12,24 @@ import RxSwift
 final class MovieRepository {
     
     let searchQuery = MovieSearchQuery()
+    let popularQuery = MoviePopularQuery()
     
-    func getMovies(with query: Observable<String>) -> Observable<[MovieResultModel]> {
+    func getSearchedMovies(with query: Observable<String>) -> Observable<[MovieSearchResultModel]> {
         return searchQuery.fetchData(with: query)
             .map { dtos in
-               return dtos.map { dto in
-                   return MovieResultModel(with: dto)
+                return dtos.map { dto in
+                    return MovieSearchResultModel(with: dto)
                 }
-        }
+            }
+    }
+    
+    func getPopularMovies() -> Observable<[MoviePopularResultModel]> {
+        return popularQuery.fetchData()
+            .map { dtos in
+                return dtos.map { dto in
+                    return MoviePopularResultModel(with: dto)
+                }
+            }
     }
     
 }

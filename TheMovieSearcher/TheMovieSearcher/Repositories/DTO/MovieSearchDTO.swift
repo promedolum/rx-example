@@ -8,11 +8,11 @@
 
 import Foundation
 
-struct MovieSearchResultDTO: Decodable {
+struct MovieSearchResultsDTO: Decodable {
     var page: Int
     var totalResults: Int
     var totalPages: Int
-    var results: [MovieResultDTO]
+    var results: [MovieSearchResultDTO]
     
     enum CodingKeys: String, CodingKey {
         case page
@@ -22,7 +22,7 @@ struct MovieSearchResultDTO: Decodable {
     }
 }
 
-struct  MovieResultDTO: Decodable {
+struct  MovieSearchResultDTO: Decodable {
     var title: String
     var overview: String
     
