@@ -40,8 +40,10 @@ class ViewController: UIViewController {
         let input = MovieSearchViewModelInput(searchQuery: searchQuery)
         
         let output = viewModel.bind(input: input)
-        output.searchResult.drive( tableView.rx.items(cellIdentifier: "cell")) { (_, model, cell) in
-            cell.textLabel?.text = model.title
+        output.searchResult
+            .debug()
+            .drive( tableView.rx.items(cellIdentifier: "cell")) { (_, model, cell) in
+            cell.textLabel?.text = model.localizedTitle
         }
         .disposed(by: disposeBag)
         

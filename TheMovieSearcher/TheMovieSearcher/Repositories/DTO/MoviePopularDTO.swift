@@ -8,6 +8,20 @@
 
 import Foundation
 
+//protocol MoviePart1DTO {
+//    var id: String {get set}
+//}
+//
+//protocol  MoviePart2DTO {
+//    var title: String {get set}
+//}
+//
+//struct FullMovie: MoviePart1DTO & MoviePart2DTO {
+//    var id: String
+//    
+//    var title: String
+//}
+
 struct MoviePopularResultsDTO: Decodable {
     var page: Int
     var totalResults: Int

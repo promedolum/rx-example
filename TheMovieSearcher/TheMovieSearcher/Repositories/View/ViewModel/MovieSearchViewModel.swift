@@ -16,7 +16,7 @@ struct MovieSearchViewModelInput {
 
 struct MovieSearchViewModelOutput {
     
-    let searchResult: Driver<[MovieSearchResultModel]>
+    let searchResult: Driver<[MoviePopularResultModel]>
 }
 
 final class MovieSearchViewModel {
@@ -28,13 +28,30 @@ final class MovieSearchViewModel {
     }
     
     func bind(input: MovieSearchViewModelInput) -> MovieSearchViewModelOutput {
-        
-        let nonNullQuery = input.searchQuery.map { string -> String in
-            return string ?? ""
+
+        let niceRequest = input.searchQuery.flatMap { [weak self] inputString -> Observable<[MoviePopularResultModel]> in
+            guard let self = self else { throw RxError.unknown }
+            let request: Observable<[MoviePopularResultModel]>
+            if let input = inputString,
+               !input.isEmpty {
+                request = self.repo.getSearchedMovies(with: Observable.just(input))
+            } else {
+                request = self.repo.getPopularMovies()
+            }
+            return request
         }
+        
+//        let notNiceRequest = input.searchQuery.flatMap { [weak self] inputString -> Observable<[MoviePopularResultModel]> in
+//            guard let self = self else { throw RxError.unknown }
+//            guard let input = inputString else { throw RxError.unknown }
+//            return self.repo.getSearchedMovies(with: Observable.just(input))
+//        }
+//        .debug()
+//        .retry()
     
         return MovieSearchViewModelOutput(
-            searchResult: repo.getSearchedMovies(with: nonNullQuery).asDriver(onErrorJustReturn: [MovieSearchResultModel]())
+//            searchResult:notNiceRequest.asDriver(onErrorJustReturn: [MoviePopularResultModel]())
+            searchResult:niceRequest.asDriver(onErrorJustReturn: [MoviePopularResultModel]())
         )
         
     }

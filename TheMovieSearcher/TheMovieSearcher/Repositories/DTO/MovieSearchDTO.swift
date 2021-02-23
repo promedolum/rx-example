@@ -12,7 +12,7 @@ struct MovieSearchResultsDTO: Decodable {
     var page: Int
     var totalResults: Int
     var totalPages: Int
-    var results: [MovieSearchResultDTO]
+    var results: [MoviePopularResultDTO]
     
     enum CodingKeys: String, CodingKey {
         case page
